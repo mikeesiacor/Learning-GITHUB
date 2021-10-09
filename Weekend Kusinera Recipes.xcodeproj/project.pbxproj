@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E24AD7E027117AE900191005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AD7DF27117AE900191005 /* AppDelegate.swift */; };
+		E24AD7E227117AE900191005 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AD7E127117AE900191005 /* SceneDelegate.swift */; };
+		E24AD7E427117AE900191005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AD7E327117AE900191005 /* ContentView.swift */; };
+		E24AD7E627117AEE00191005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24AD7E527117AEE00191005 /* Assets.xcassets */; };
+		E24AD7E927117AEE00191005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24AD7E827117AEE00191005 /* Preview Assets.xcassets */; };
+		E24AD7EC27117AEE00191005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24AD7EA27117AEE00191005 /* LaunchScreen.storyboard */; };
+		E24AD7F927117BCC00191005 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E24AD7F827117BCC00191005 /* data.json */; };
+		E24AD7FB2711B17200191005 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AD7FA2711B17200191005 /* Recipe.swift */; };
+		E24AD7FD2711B2EA00191005 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AD7FC2711B2EA00191005 /* RecipeModel.swift */; };
+		E24AD7FF2711B39200191005 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AD7FE2711B39200191005 /* DataServices.swift */; };
+		E24AD8012711B4B700191005 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AD8002711B4B700191005 /* RecipeList.swift */; };
+		E24AD8032711B79200191005 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24AD8022711B79200191005 /* RecipeDetail.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E24AD7DC27117AE900191005 /* Weekend Kusinera Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weekend Kusinera Recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E24AD7DF27117AE900191005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E24AD7E127117AE900191005 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E24AD7E327117AE900191005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E24AD7E527117AEE00191005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E24AD7E827117AEE00191005 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E24AD7EB27117AEE00191005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E24AD7ED27117AEE00191005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E24AD7F827117BCC00191005 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		E24AD7FA2711B17200191005 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		E24AD7FC2711B2EA00191005 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		E24AD7FE2711B39200191005 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		E24AD8002711B4B700191005 /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		E24AD8022711B79200191005 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; wrapsLines = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E24AD7D927117AE900191005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E24AD7D327117AE900191005 = {
+			isa = PBXGroup;
+			children = (
+				E24AD7DE27117AE900191005 /* Weekend Kusinera Recipes */,
+				E24AD7DD27117AE900191005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E24AD7DD27117AE900191005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E24AD7DC27117AE900191005 /* Weekend Kusinera Recipes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E24AD7DE27117AE900191005 /* Weekend Kusinera Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				E24AD7DF27117AE900191005 /* AppDelegate.swift */,
+				E24AD7E127117AE900191005 /* SceneDelegate.swift */,
+				E24AD7F327117B0500191005 /* Model */,
+				E24AD7F427117B1600191005 /* ViewModel */,
+				E24AD7F527117B2A00191005 /* View */,
+				E24AD7F727117B5200191005 /* Services */,
+				E24AD7F627117B3700191005 /* Data */,
+				E24AD7E527117AEE00191005 /* Assets.xcassets */,
+				E24AD7EA27117AEE00191005 /* LaunchScreen.storyboard */,
+				E24AD7ED27117AEE00191005 /* Info.plist */,
+				E24AD7E727117AEE00191005 /* Preview Content */,
+			);
+			path = "Weekend Kusinera Recipes";
+			sourceTree = "<group>";
+		};
+		E24AD7E727117AEE00191005 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E24AD7E827117AEE00191005 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E24AD7F327117B0500191005 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E24AD7FA2711B17200191005 /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E24AD7F427117B1600191005 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E24AD7FC2711B2EA00191005 /* RecipeModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E24AD7F527117B2A00191005 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E24AD7E327117AE900191005 /* ContentView.swift */,
+				E24AD8002711B4B700191005 /* RecipeList.swift */,
+				E24AD8022711B79200191005 /* RecipeDetail.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E24AD7F627117B3700191005 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E24AD7F827117BCC00191005 /* data.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E24AD7F727117B5200191005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E24AD7FE2711B39200191005 /* DataServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E24AD7DB27117AE900191005 /* Weekend Kusinera Recipes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E24AD7F027117AEE00191005 /* Build configuration list for PBXNativeTarget "Weekend Kusinera Recipes" */;
+			buildPhases = (
+				E24AD7D827117AE900191005 /* Sources */,
+				E24AD7D927117AE900191005 /* Frameworks */,
+				E24AD7DA27117AE900191005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Weekend Kusinera Recipes";
+			productName = "Weekend Kusinera Recipes";
+			productReference = E24AD7DC27117AE900191005 /* Weekend Kusinera Recipes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E24AD7D427117AE900191005 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Mikee Siacor";
+				TargetAttributes = {
+					E24AD7DB27117AE900191005 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E24AD7D727117AE900191005 /* Build configuration list for PBXProject "Weekend Kusinera Recipes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E24AD7D327117AE900191005;
+			productRefGroup = E24AD7DD27117AE900191005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E24AD7DB27117AE900191005 /* Weekend Kusinera Recipes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E24AD7DA27117AE900191005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E24AD7EC27117AEE00191005 /* LaunchScreen.storyboard in Resources */,
+				E24AD7E927117AEE00191005 /* Preview Assets.xcassets in Resources */,
+				E24AD7E627117AEE00191005 /* Assets.xcassets in Resources */,
+				E24AD7F927117BCC00191005 /* data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E24AD7D827117AE900191005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E24AD8032711B79200191005 /* RecipeDetail.swift in Sources */,
+				E24AD7E027117AE900191005 /* AppDelegate.swift in Sources */,
+				E24AD7E227117AE900191005 /* SceneDelegate.swift in Sources */,
+				E24AD7FD2711B2EA00191005 /* RecipeModel.swift in Sources */,
+				E24AD7FF2711B39200191005 /* DataServices.swift in Sources */,
+				E24AD7E427117AE900191005 /* ContentView.swift in Sources */,
+				E24AD7FB2711B17200191005 /* Recipe.swift in Sources */,
+				E24AD8012711B4B700191005 /* RecipeList.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E24AD7EA27117AEE00191005 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E24AD7EB27117AEE00191005 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E24AD7EE27117AEE00191005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E24AD7EF27117AEE00191005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E24AD7F127117AEE00191005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Weekend Kusinera Recipes/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Weekend Kusinera Recipes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mikeetest.Weekend-Kusinera-Recipes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E24AD7F227117AEE00191005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Weekend Kusinera Recipes/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Weekend Kusinera Recipes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mikeetest.Weekend-Kusinera-Recipes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E24AD7D727117AE900191005 /* Build configuration list for PBXProject "Weekend Kusinera Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E24AD7EE27117AEE00191005 /* Debug */,
+				E24AD7EF27117AEE00191005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E24AD7F027117AEE00191005 /* Build configuration list for PBXNativeTarget "Weekend Kusinera Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E24AD7F127117AEE00191005 /* Debug */,
+				E24AD7F227117AEE00191005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E24AD7D427117AE900191005 /* Project object */;
+}

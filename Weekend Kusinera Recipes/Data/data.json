@@ -1,0 +1,24 @@
+[
+{
+    "name" : "Humba Bisaya",
+    "cuisine" : "Filipino",
+    "ingredients" : ["1kg Pork Belly","4 cloves minced garlic","4 pcs Bay Leaves","2 tbsp Soy Sauce","1 tbsp Dark Soya Sauce", "2 tbsp vinegar", "1.5 cup water for","1.5 tbsp Brown Sugar","1 tbsp Salted Black Beans","4pcs Dried Banana Blossoms"],
+    "procedure" : ["1. Combine pork belly, garlic, soy sauce and vinegar in wok", "2. Bring to a boil over medium/high heat, stirring occasionally until fat has rendered and meat is tender.","3. Transfer meat to a large pot. Add dark soya sauce, sugar, bay leaves and water", "4. Bring to a boil until and simmer until meat is tender and liquid is reduced to 1/3","5. Add black beans and simmer until liquid is reduced and thickened"],
+    "image" : "IMG_2028"
+},
+{
+    "name" : "Beef Salpicao",
+    "cuisine" : "Filipino",
+    "ingredients": ["3/4 kg thinly sliced beef tenderloin", "4 tbsp crushed garlic", "salt and pepper to taste", "6 tbsp Worecestershire sauce", "2 tbsp soy sauce", "2-3 tbsp butter", "2 tbsp olive oil", "5 cloves sliced garlic (toasted for garnish)"],
+    "procedure" : ["1. Marinate beef in salt, pepper, garlic and olive oil for 30 minutes in a bowl.", "2. n a large pan, heat cooking oil over very high heat. Toss in beef with marinade ingredients. Keep on tossing very swiftly in very high heat.","3. eason with worcestershire sauce, soy sauce salt and pepper. Continue tossing until the sauce is well absorbed in the beef.", "Finish with butter and toss the beef as it melts.Turn of heat. Serve with lots of toasted garlic on top."],
+    "image" : "IMG_3158"
+},
+{
+    "name" : "Prawns and Mushrooms with Scrambled Eggs",
+    "cuisine" : "Chinese",
+    "ingredients" : ["5pcs eggs","2tbsp cooking oil","6pcs large prawns", "100g Sheimiji mushrooms","100g white mushrooms", "1cup chicken broth","1tsp oyster sauce", "1tbsp soy sauce","2tbsp cornstarch slurry","1tbsp Shao Xing wine","salt and pepper to taste","chopped green onions","1cup cooked rice"],
+    "procedure" : ["1. Cut off the bottoms of the seafood mushrooms, beach mushrooms and white mushrooms. Separate them individually and then clean them.", "2. Heat cooking oil over medium heat and make scrambled egg first.", "3. Heat cooking oil over medium heat, then stir fry mushrooms for 1-2 mins. Then add salt, balck pepper, shrimp, cooking wine, chicken broth, soy sacue, sugar, and oyster sauce. Mix them well.", "4. Then, add water and corn starch. Let it stew.", "5. Put the scrambled egg on the rice.","6. Pour the cooked mushroom from Step 3 on top", "7. Garnish with green onions"],
+    "image": "IMG_5457"
+}
+]
+
