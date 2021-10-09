@@ -41,7 +41,7 @@ struct RecipeList: View {
 struct QuotesView_Previews: PreviewProvider {
     static var previews: some View {
   
-        RecipeList(recipes: Recipe(id: UUID(), name: "Humba Bisaya", cuisine: "Filipino", ingredients: ["Pork Belly","Soy Sauce"], procedure: ["1. Marinate", "2. Saute"], image: "IMG_2028") )
+        RecipeList(recipes: Recipe(id: UUID(), name: "Humba Bisaya", cuisine: "Filipino", ingredients: ["Pork Belly","Soy Sauce"], procedure: ["1. Marinate", "2. Saute over high heat"], image: "IMG_2028") )
         
     }
 }
