@@ -1,5 +1,5 @@
 //
-//  RecipeList.swift
+//  ContentView.swift
 //  Weekend Kusinera Recipes
 //
 //  Created by Michelle Siacor on 9/10/21.
@@ -10,38 +10,55 @@ import SwiftUI
 
 struct RecipeList: View {
     
-    var recipes: Recipe
+    //@ObservedObject var model = RecipeModel()
+    
+    @EnvironmentObject var model: RecipeModel
     
     var body: some View {
-        //Text(quotes.name)
-        ZStack {
-            Image(recipes.image)
-                .resizable()
-                .frame(width: 400.0, height: 400.0)
-                .aspectRatio(contentMode: .fill)
-                .cornerRadius(50)
-                .clipped()
-                  
-            VStack (alignment: .center) {
-                Text(recipes.name)
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.white)
-                Text("- " + recipes.cuisine)
-                   .multilineTextAlignment(.center)
-                   .foregroundColor(.white)
-                
-            }
-            
-         }
+        
+        NavigationView {
+            VStack{
+              
+            List(model.recipe) {m in
+                NavigationLink (
+                    destination: RecipeDetail(recipe: m),
+                    label:{
+                        //ZStack {
+                        
+                        VStack {
+                            HStack {
+                                Image(m.image)
+                                    .resizable()
+                                    .frame(width: 50.0, height: 50.0)
+                                    .cornerRadius(5)
+                                    .aspectRatio(contentMode: .fill)
+                                    .clipped()
+                                
+                                    Text(m.name)
+                                        .foregroundColor(.black)
+                                        .font(.subheadline)
+                                }
+                                
+                               // Text("Cuisine: " + m.cuisine)
+                                       .font(.footnote)
+                                       .padding()
+                                       .foregroundColor(.black)
+
+                        }
+                        
+                }
+                )
+                            }
+                                        }.navigationBarTitle("Weekend Kusinera's Recipes")
+        }
+  
         
     }
 }
 
-struct QuotesView_Previews: PreviewProvider {
+
+struct RecipeList_Previews: PreviewProvider {
     static var previews: some View {
-  
-        RecipeList(recipes: Recipe(id: UUID(), name: "Humba Bisaya", cuisine: "Filipino", ingredients: ["Pork Belly","Soy Sauce"], procedure: ["1. Marinate", "2. Saute over high heat"], image: "IMG_2028") )
-        
+        RecipeList()
     }
 }

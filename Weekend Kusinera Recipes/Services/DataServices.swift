@@ -29,7 +29,12 @@ class DataServices {
                 var recipedata = try decoder.decode([Recipe].self, from: dataObj)
                 for index in 0...recipedata.count - 1 {
                     recipedata[index].id = UUID()
+                    
+                    for i in recipedata[index].ingredients {
+                        i.id = UUID()
+                    }
                 }
+                
                 return recipedata
              }
              catch {

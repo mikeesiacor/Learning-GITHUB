@@ -17,7 +17,7 @@ struct MainView: View {
         TabView (selection: $tabIndex) {
             
             //Featured Recipes
-            Text("Featured Recipes")
+              RecipeFeatured()
                 .tabItem {
                     VStack{
                         Image(systemName: "star.circle")
@@ -26,15 +26,14 @@ struct MainView: View {
             }.tag(0)
             
             //Recipe List
-            // RecipeList(recipes: Recipe(id: UUID(), name: "Humba Bisaya", cuisine: "Filipino", ingredients: ["Pork Belly","Soy Sauce"], procedure: ["1. Marinate", "2. Saute over high heat"], image: "IMG_2028") )
-            ContentView()
+            RecipeList()
                 .tabItem  {
                     VStack{
                         Image(systemName: "list.bullet")
                         Text("List")
                     }
             }.tag(1)
-        }
+        }.environmentObject(RecipeModel())
         
     }
 

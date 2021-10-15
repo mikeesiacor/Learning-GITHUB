@@ -11,7 +11,7 @@ import SwiftUI
 struct RecipeDetail: View {
     
     var recipe:Recipe
-    
+        
     var body: some View {
   
         ScrollView {
@@ -28,12 +28,14 @@ struct RecipeDetail: View {
                         Text("Ingredients: ")
                             .font(.headline)
                             .multilineTextAlignment(.leading)
-                        
-                        ForEach (recipe.ingredients, id:\.self) {item in
-                                Text(item)
-                                    .multilineTextAlignment(.leading)
-                                    
-                            }
+                     
+                    ForEach (recipe.ingredients) { item in
+                        HStack {
+                            Text(String(item.num) + " " + item.unit)
+                            Text(item.name)
+                        }
+                     }
+                      
                         Spacer()
                         
                         Text("Procedure: ")

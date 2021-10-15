@@ -8,13 +8,25 @@
 
 import Foundation
 
-struct Recipe: Identifiable, Decodable {
+class Recipe: Identifiable, Decodable {
     
     var id: UUID?
     var name: String
+    var featured: Bool
     var cuisine: String
-    var ingredients: [String]
+    var portionsize: Int
+    var highlights: [String]?
+    var ingredients: [Ingredients]
     var procedure: [String]
     var image: String
+    
+}
+
+class Ingredients: Identifiable, Decodable {
+    var id: UUID?
+    var name: String
+    var num: Int
+    var denom: Int?
+    var unit: String
     
 }
