@@ -28,7 +28,7 @@
     "highlights" : ["Fusion","Keto Friendly"],
     "ingredients" : [
         {"name": "beef tenderloin, cubed", "num" : 3, "denom": 4, "unit" : "kg"},
-        {"name": "salt and pepper", "num" : 1, "unit": "tsp"},
+        {"name": "salt and pepper", "unit": "to taste"},
         {"name": "Worcestershire sauce", "num": 6, "unit": "tbsp" },
         {"name": "butter", "num" : 2, "unit" : "tbsp"},
         {"name": "olive oil", "num" : 2, "unit": "tbsp"},

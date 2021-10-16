@@ -25,7 +25,7 @@ class Recipe: Identifiable, Decodable {
 class Ingredients: Identifiable, Decodable {
     var id: UUID?
     var name: String
-    var num: Int
+    var num: Int?
     var denom: Int?
     var unit: String
     

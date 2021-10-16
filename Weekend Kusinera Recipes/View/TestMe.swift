@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct RecipeDetail: View {
+struct TestMe: View {
     
     var recipe:Recipe
-    @State var selectedServingSize = 1
+
      
     var body: some View {
   
@@ -27,17 +27,7 @@ struct RecipeDetail: View {
                           .resizable()
                           .frame(width: 400.0, height: 400.0, alignment: .leading)
                     
-                    HStack {
-                             Text("Serving Size:")
-                             Picker("", selection: $selectedServingSize) {
-                                 Text("1x").tag(1)
-                                 Text("2x").tag(2)
-                                 Text("3x").tag(3)
-                              }
-                             .pickerStyle(SegmentedPickerStyle())
-                             .frame(width:160)
-                         }
-                         .padding()
+
                     
                       
                     Text("Ingredients: ")
@@ -45,22 +35,10 @@ struct RecipeDetail: View {
                             .multilineTextAlignment(.leading)
                      
                     ForEach (recipe.ingredients) { item in
-                        
-                         HStack {
-                            Text(RecipeModel.calculateQty(ing: item, multServ: self.selectedServingSize) + " ")
-                        
-                            //if item.num != nil {
-                            //    Text(" \(item.num!) \(item.unit)")
-                            // }
+                        HStack {
                             
                             Text(item.name)
-                              
-                        }  //HSTack
-                        
-                        
-                        
-                        
-                        
+                             }  //HSTack
                          }
                      }
                       
@@ -85,7 +63,7 @@ struct RecipeDetail: View {
 
 
 
-struct RecipeDetailView_Previews: PreviewProvider {
+struct TestMe_Previews: PreviewProvider {
     static var previews: some View {
 
         let model = RecipeModel()
