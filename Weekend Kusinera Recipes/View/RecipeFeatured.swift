@@ -1,76 +1,93 @@
 //
-//  RecipeFeatured.swift
-//  Weekend Kusinera Recipes
+//  RecipeFeaturedView.swift
+//  Recipe List App
 //
-//  Created by Michelle Siacor on 13/10/21.
-//  Copyright © 2021 Mikee Siacor. All rights reserved.
+//  Created by Christopher Ching on 2021-02-09.
 //
 
 import SwiftUI
 
 struct RecipeFeatured: View {
     
-    @EnvironmentObject var model: RecipeModel
-
+    @EnvironmentObject var model:RecipeModel
+    @State var isDetailViewShowing = false
+    @State var tabSelectionIndex = 0
+    
+    
     var body: some View {
+ 
+        VStack {
         
-    VStack {
-        Text("Weekend Kusinera's Featured Recipes")
-                .bold()
-                .multilineTextAlignment(.center)
-                .padding()
-        
-        
-        GeometryReader { geo in
+        /*
+        Text("Featured Recipes")
+            .bold()
+            .padding(.leading)
+            .padding(.top, 100)
+            .font(.largeTitle)
+        */
             
-            ScrollView (.horizontal, showsIndicators: true) {
-                
-              //  ZStack {
-                    //Rectangle().foregroundColor(.white)
-                   
-                    
-                    HStack {
-                        ForEach(self.model.recipe) {m in
-                                 if (m.featured == true) {
-                                        VStack {
-                                            
-                                            Text(m.name)
-                                                 .foregroundColor(.black)
-                                                 .padding()
-                                            
-                                            Text("Cuisine : \(m.cuisine)")
-    
-                                            Image (m.image)
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .clipped()
-                                            
-  //                                          ForEach(0...m.highlights.count-1) { index in
-  //                                              Text(highlights[index])
-  //                                          }
-                                            
-                                         }
+            NavigationView {
+               GeometryReader { geo in
+                ScrollView (.horizontal, showsIndicators: true) {
+                 
+                 HStack(spacing: 0) {
+                    ForEach(self.model.recipe) {m in
+                         if (m.featured == true) {
+                            NavigationLink(destination: RecipeDetail(recipe: m) ,
+                                label: {
+                                 VStack {
+                                  
+                                 Text(m.name)
+                                    .font(.headline)
+                                    .bold()
+                                    .multilineTextAlignment(.leading)
+                                    
+                                 Image(m.image)
+                                 .resizable()
+                                 .aspectRatio(contentMode: .fit)
+                                 .clipped()
+                                 .frame(width: 500, height: 500, alignment: .topLeading)
+                                 .offset(x: 2, y: 2)
+                                 
+                                 Text("Cuisine : \(m.cuisine)")
+                                 
+                                 HStack {
+                                     Text("***")
+                                     Text(RecipeModel.fetchHighlights(r: m.highlights))
+                                     Text("***")
+                                 }
+
+                             
                                 }
-                          }
-                   }
+                        }
+                            ).buttonStyle(PlainButtonStyle())
+                             
+                     }
+                         
+                     }
 
-                 }.frame(width: geo.size.width - 30 , height: geo.size.height-50, alignment: .center)
-                 .cornerRadius(20)
-                 .shadow(color: Color (.sRGB, red: 0, green: 0, blue: 0, opacity: 0.5), radius: 10, x: -5, y: 5)
-            
-        }
-        
-        
+                 }
 
-    
-        }
-        
+                }
+                    
+                
+                
+               }.navigationBarTitle("Recommended Recipes")
+             
+            }
+
             
+
     }
+    
+
 }
+}
+
 
 struct RecipeFeatured_Previews: PreviewProvider {
     static var previews: some View {
         RecipeFeatured()
+            .environmentObject(RecipeModel())
     }
 }

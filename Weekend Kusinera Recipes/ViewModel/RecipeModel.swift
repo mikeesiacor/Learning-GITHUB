@@ -14,7 +14,7 @@ class RecipeModel: ObservableObject  {
     
     init() {
         let service = DataServices()
-        recipe = service.getRecipeData()
+        self.recipe = service.getRecipeData()
 
         
     }  // init
@@ -27,6 +27,7 @@ class RecipeModel: ObservableObject  {
         var numer = ing.num ?? 1
         var denom = ing.denom ?? 1
         var wholeNum = 0
+        var unit = ""
     
     if ing.num != nil {
     
@@ -42,7 +43,7 @@ class RecipeModel: ObservableObject  {
         if numer >= denom {
             wholeNum = numer/denom
             numer = numer % denom
-            serving += String(wholeNum)
+            serving += String(wholeNum).trimmingCharacters(in: .whitespaces)
         }
         else {
             if numer != denom {
@@ -52,7 +53,7 @@ class RecipeModel: ObservableObject  {
     
    
         if (wholeNum > 0 &&  numer > 0 ) {
-           serving += wholeNum > 0 ? " " : ""
+           serving += wholeNum > 0 ? "" : ""
             if numer != denom {
                 serving += "\(numer)/\(denom)"
             }
@@ -61,18 +62,44 @@ class RecipeModel: ObservableObject  {
         
     }
     
-        if ing.unit != nil {
-            
-            
-            
-            
-            return serving + " " + ing.unit
+        
+    //determine suffix for plural
+    if ing.unit != nil {
+        
+        unit = ing.unit
+        
+        if wholeNum > 1 {
+            if ing.unit.suffix(2) == "ch" {
+                unit += "ves"
+            }
+            else {
+                unit += "s"
+            }
         }
         
-        return serving
+        return serving + " " + unit
+    }
+    
+    return serving
     
     }
     
+    
+    static func fetchHighlights(r: Array<String>) -> String {
+       
+        var allHighlights = ""
+        
+        for i in 0..<r.count {
+            if i < r.count - 1 {
+                allHighlights += r[i] + ","
+            }
+            else {
+                allHighlights += r[i]
+            }
+        }
+        
+        return (allHighlights)
+    }
     
 }
 

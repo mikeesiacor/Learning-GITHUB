@@ -12,6 +12,7 @@ struct RecipeDetail: View {
     
     var recipe:Recipe
     @State var selectedServingSize = 1
+ 
      
     var body: some View {
   
@@ -19,8 +20,8 @@ struct RecipeDetail: View {
             
     
                 VStack {
-                    Text(recipe.name)
-                        .font(.title)
+                     Text(recipe.name)
+                        .font(.headline)
                         .bold()
 
                     Image(recipe.image)
@@ -43,11 +44,12 @@ struct RecipeDetail: View {
                     Text("Ingredients: ")
                             .font(.headline)
                             .multilineTextAlignment(.leading)
-                     
+                    
+                    
                     ForEach (recipe.ingredients) { item in
                         
                          HStack {
-                            Text(RecipeModel.calculateQty(ing: item, multServ: self.selectedServingSize) + " ")
+                            Text(RecipeModel.calculateQty(ing: item, multServ: self.selectedServingSize) )
                         
                             //if item.num != nil {
                             //    Text(" \(item.num!) \(item.unit)")

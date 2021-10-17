@@ -14,8 +14,7 @@ class Recipe: Identifiable, Decodable {
     var name: String
     var featured: Bool
     var cuisine: String
-    var portionsize: Int
-    var highlights: [String]?
+    var highlights: [String]
     var ingredients: [Ingredients]
     var procedure: [String]
     var image: String
