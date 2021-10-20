@@ -31,9 +31,19 @@ struct MainView: View {
                 .tabItem  {
                     VStack{
                         Image(systemName: "list.bullet")
-                        Text("List")
+                        Text("Recipe List")
                     }
             }.tag(1)
+            
+            //Shopping Cart
+            ShoppingList()
+                .tabItem {
+                    VStack{
+                        Image(systemName: "cart.fill")
+                        Text("Shopping List")
+                    }
+            }.tag(2)
+            
         }.environmentObject(RecipeModel())
         
     }

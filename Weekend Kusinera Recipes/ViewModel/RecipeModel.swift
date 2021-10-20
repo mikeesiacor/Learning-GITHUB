@@ -21,13 +21,14 @@ class RecipeModel: ObservableObject  {
     
  
     //static func calculateQty (ing: Ingredients, oneServing: Int, multServ: Int) -> String {
-    static func calculateQty (ing: Ingredients, multServ: Int) -> String {
+    static func calculateQty (ing: Ingredients, multServ: Int, addToList: Bool) -> String {
      
         var serving = ""
         var numer = ing.num ?? 1
         var denom = ing.denom ?? 1
         var wholeNum = 0
         var unit = ""
+        var fullingredient = ""
     
     if ing.num != nil {
     
@@ -77,9 +78,17 @@ class RecipeModel: ObservableObject  {
             }
         }
         
-        return serving + " " + unit
+        //return serving + " " + unit
+        serving = serving + " " + unit
+        
+        if addToList == true {
+            fullingredient = serving + " " + ing.name
+            print(fullingredient)
+        }
+
     }
     
+        
     return serving
     
     }
