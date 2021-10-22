@@ -13,6 +13,8 @@ struct RecipeDetail: View {
     var recipe:Recipe
     @State var selectedServingSize = 1
     @State var added = false
+    
+     @EnvironmentObject var model: RecipeModel
      
     var body: some View {
   
@@ -60,18 +62,11 @@ struct RecipeDetail: View {
                             //Text(RecipeModel.calculateQty(ing: item, multServ: self.selectedServingSize) )
                             Text(RecipeModel.calculateQty(ing: item, multServ: self.selectedServingSize, addToList: self.added) )
                         
-                            //if item.num != nil {
-                            //    Text(" \(item.num!) \(item.unit)")
-                            // }
-                            
                             Text(item.name)
                               
                         }  //HSTack
                         
-                        
-                        
-                        
-                        
+                         
                          }
                      }
                       

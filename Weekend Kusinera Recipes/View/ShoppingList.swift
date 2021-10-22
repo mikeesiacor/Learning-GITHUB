@@ -9,8 +9,28 @@
 import SwiftUI
 
 struct ShoppingList: View {
+    
+    @EnvironmentObject var model: RecipeModel
+    
     var body: some View {
-        Text("Your Shopping Cart is Empty")
+ 
+        VStack {
+            Text("Weekend Kusinera's Cart")
+                .font(.headline)
+                .bold()
+            
+            if (model.cart.count  == 0 || model.cart == nil ) {
+                  Text("Shopping Cart is Currently Empty")
+            }
+            else {
+                Text("Shopping Cart is Full")
+            }
+
+        }
+        
+        
+        
+        //Text("Your Shopping Cart is Empty")
     }
 }
 

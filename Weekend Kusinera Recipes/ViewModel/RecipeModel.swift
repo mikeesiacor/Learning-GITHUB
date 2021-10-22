@@ -8,14 +8,16 @@
 
 import Foundation
 
+
+
 class RecipeModel: ObservableObject  {
     
     @Published var recipe =  [Recipe]()
+    @Published var cart = [Cart]()
     
     init() {
         let service = DataServices()
         self.recipe = service.getRecipeData()
-
         
     }  // init
     
@@ -81,8 +83,10 @@ class RecipeModel: ObservableObject  {
         //return serving + " " + unit
         serving = serving + " " + unit
         
+        //check if Add to Cart is pressed
         if addToList == true {
             fullingredient = serving + " " + ing.name
+            addToCart(ing: fullingredient)
             print(fullingredient)
         }
 
@@ -93,7 +97,7 @@ class RecipeModel: ObservableObject  {
     
     }
     
-    
+    //fetch highlights
     static func fetchHighlights(r: Array<String>) -> String {
        
         var allHighlights = ""
@@ -108,6 +112,15 @@ class RecipeModel: ObservableObject  {
         }
         
         return (allHighlights)
+    }
+    
+    //add to Shopping cart
+    static func addToCart (ing: String) -> Void {
+        var obj = Cart()
+        obj.cartitem.append(ing)
+         
+           
+        return
     }
     
 }
