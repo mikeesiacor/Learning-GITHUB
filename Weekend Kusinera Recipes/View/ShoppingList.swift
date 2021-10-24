@@ -12,25 +12,33 @@ struct ShoppingList: View {
     
     @EnvironmentObject var model: RecipeModel
     
+     
     var body: some View {
  
-        VStack {
+        VStack  {
             Text("Weekend Kusinera's Cart")
                 .font(.headline)
                 .bold()
             
-            if (model.cart.count  == 0 || model.cart == nil ) {
-                  Text("Shopping Cart is Currently Empty")
+            ScrollView  {
+                 ForEach(self.model.recipe) {m in
+                    ForEach(m.ingredients) {ing in
+                        if (ing.inlist == true && ing.shopitem != nil) {
+                            
+                            Text(ing.shopitem)
+                                .multilineTextAlignment(.leading)
+                            
+                          }
+                     }
+                    
+                 }
+                
             }
-            else {
-                Text("Shopping Cart is Full")
-            }
+            
 
         }
         
-        
-        
-        //Text("Your Shopping Cart is Empty")
+         //Text("Your Shopping Cart is Empty")
     }
 }
 

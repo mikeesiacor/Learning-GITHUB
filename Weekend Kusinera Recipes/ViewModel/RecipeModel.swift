@@ -14,6 +14,7 @@ class RecipeModel: ObservableObject  {
     
     @Published var recipe =  [Recipe]()
     @Published var cart = [Cart]()
+    var listcount = 0
     
     init() {
         let service = DataServices()
@@ -85,8 +86,10 @@ class RecipeModel: ObservableObject  {
         
         //check if Add to Cart is pressed
         if addToList == true {
+            ing.inlist = true
             fullingredient = serving + " " + ing.name
-            addToCart(ing: fullingredient)
+            ing.shopitem = fullingredient
+            //addToCart(ing: fullingredient)
             print(fullingredient)
         }
 
@@ -125,3 +128,4 @@ class RecipeModel: ObservableObject  {
     
 }
 
+ 

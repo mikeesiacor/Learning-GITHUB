@@ -27,5 +27,7 @@ class Ingredients: Identifiable, Decodable {
     var num: Int?
     var denom: Int?
     var unit: String
+    var inlist: Bool
+    var shopitem: String
     
 }
