@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Recipe: Identifiable, Decodable {
+class Recipe: Identifiable, Codable {
     
     var id: UUID?
     var name: String
@@ -21,7 +21,7 @@ class Recipe: Identifiable, Decodable {
     
 }
 
-class Ingredients: Identifiable, Decodable {
+class Ingredients: Identifiable, Codable {
     var id: UUID?
     var name: String
     var num: Int?

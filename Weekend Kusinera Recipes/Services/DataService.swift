@@ -1,15 +1,8 @@
-//
-//  DataServices.swift
-//  Weekend Kusinera Recipes
-//
-//  Created by Michelle Siacor on 9/10/21.
-//  Copyright © 2021 Mikee Siacor. All rights reserved.
-//
-
 import Foundation
 
-class DataServices {
+class DataService {
     
+    //fetch data
     func getRecipeData() -> [Recipe]
     {
         let dataPath = Bundle.main.path(forResource: "data", ofType: "json")
@@ -51,6 +44,26 @@ class DataServices {
       
     
     }  //getQuotesData
+    
+    //write updates
+    static func updateRecipeData(recdata: Recipe) -> Void {
+        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        //let documentDirectory = FileManager.default.urls(for: .applicationDirectory, in: .userDomainMask).first!
+        
+        let jsonURL = documentDirectory
+            .appendingPathComponent("data")
+            .appendingPathExtension("json")
+        
+        //try? JSONEncoder().encode(recdata).write(to: jsonURL, options: .atomic)
+        
+        do {
+            var recipedata = try JSONEncoder().encode(recdata).write(to: jsonURL, options: .atomic)
+        }
+        catch {
+            print("in updateRecipeData \(error)")
+        }
+        //print("in updateRecipeData" )
+    }
     
     
 }

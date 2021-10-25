@@ -17,7 +17,7 @@ class RecipeModel: ObservableObject  {
     var listcount = 0
     
     init() {
-        let service = DataServices()
+        let service = DataService()    //DataServices()
         self.recipe = service.getRecipeData()
         
     }  // init
@@ -91,6 +91,7 @@ class RecipeModel: ObservableObject  {
             ing.shopitem = fullingredient
             //addToCart(ing: fullingredient)
             print(fullingredient)
+            //DataService.updateRecipeData(recdata: recipe)
         }
 
     }
@@ -118,14 +119,20 @@ class RecipeModel: ObservableObject  {
     }
     
     //add to Shopping cart
-    static func addToCart (ing: String) -> Void {
+    static func addToCart (ing: String) -> Bool {
         var obj = Cart()
         obj.cartitem.append(ing)
          
            
-        return
+        return true
     }
     
+        
+    static func saveCart(m: RecipeModel)  -> Bool {
+        
+        print ("saveCart invoked")
+        return true
+    }
 }
 
  

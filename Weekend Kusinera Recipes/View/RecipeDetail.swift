@@ -82,7 +82,9 @@ struct RecipeDetail: View {
                             }
                         Spacer()
                         
-                 }
+        }.onDisappear {
+            DataService.updateRecipeData(recdata: self.recipe)
+        }
             
         }
 

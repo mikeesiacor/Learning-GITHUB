@@ -11,7 +11,6 @@ import SwiftUI
 struct ShoppingList: View {
     
     @EnvironmentObject var model: RecipeModel
-    
      
     var body: some View {
  
@@ -35,8 +34,12 @@ struct ShoppingList: View {
                 
             }
             
-
+           
+        }.onDisappear {
+            RecipeModel.saveCart(m:self.model)
+            //DataService.updateRecipeData(recdata: [Recipe])
         }
+        
         
          //Text("Your Shopping Cart is Empty")
     }
