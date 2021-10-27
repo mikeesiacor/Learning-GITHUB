@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Cart: Identifiable {
+class Cart: Identifiable, Codable {
     var id: UUID?
     var cartitem: String = ""
 }

@@ -18,8 +18,20 @@ struct ShoppingList: View {
             Text("Weekend Kusinera's Cart")
                 .font(.headline)
                 .bold()
+          
             
             ScrollView  {
+  
+                ForEach(model.myCart, id: \.self ) {c in
+                    Text(c)
+                }
+                
+                
+                //for (index, value) in model.myCart.enumerated() {
+                //    Text(value)
+                //}
+                 
+                /*
                  ForEach(self.model.recipe) {m in
                     ForEach(m.ingredients) {ing in
                         if (ing.inlist == true && ing.shopitem != nil) {
@@ -31,13 +43,13 @@ struct ShoppingList: View {
                      }
                     
                  }
-                
+                */
             }
             
            
         }.onDisappear {
-            RecipeModel.saveCart(m:self.model)
-            //DataService.updateRecipeData(recdata: [Recipe])
+            //RecipeModel.saveCart(m:self.model)
+           // DataService.updateRecipeData(recdata: [Recipe])
         }
         
         

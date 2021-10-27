@@ -13,12 +13,16 @@ import Foundation
 class RecipeModel: ObservableObject  {
     
     @Published var recipe =  [Recipe]()
+    //@Published var myCart:[(Int, String)] = []
+    @Published var myCart:[String] = []
     @Published var cart = [Cart]()
     var listcount = 0
     
     init() {
         let service = DataService()    //DataServices()
         self.recipe = service.getRecipeData()
+        //self.cart = service.getCartData()
+        //self.myCart = service.getCartData()
         
     }  // init
     
@@ -91,7 +95,7 @@ class RecipeModel: ObservableObject  {
             ing.shopitem = fullingredient
             //addToCart(ing: fullingredient)
             print(fullingredient)
-            //DataService.updateRecipeData(recdata: recipe)
+           
         }
 
     }

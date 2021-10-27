@@ -45,6 +45,53 @@ class DataService {
     
     }  //getQuotesData
     
+    
+    func getCartData() -> [String]  {
+
+    var tempArr = [String]()
+        
+        do {
+             let fileURL = try FileManager.default
+                 .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                 .appendingPathComponent("cart.json")
+             
+             guard fileURL != nil else {
+                 return [String]()
+             }
+
+             let cartObj = try Data(contentsOf: fileURL)
+             
+             let decoder =  JSONDecoder()
+             
+              do {
+                 var cartdata = try decoder.decode([Cart].self, from: cartObj)
+                 for index in 0...cartdata.count - 1 {
+                     cartdata[index].id = UUID()
+                    
+                    tempArr.append(cartdata[index].cartitem)
+                     
+                 }
+                 
+                 return tempArr
+              }
+              catch {
+                 //error with decoder
+                 print("in fetchCart  \(error)")
+             }
+             
+             
+         } catch {
+             print("in fetchCart 2 \(error)")
+         }
+         
+         return tempArr
+        
+        
+        
+    }
+    
+    
+    
     //write updates
     static func updateRecipeData(recdata: Recipe) -> Void {
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -64,6 +111,9 @@ class DataService {
         }
         //print("in updateRecipeData" )
     }
+    
+    
+ 
     
     
 }
