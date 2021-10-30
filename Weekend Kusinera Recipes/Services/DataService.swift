@@ -102,7 +102,8 @@ class DataService {
     //static func updateRecipeData(recdata: Recipe) -> Void {
    
     
-    static func updateRecipeData(recdata: Recipe) -> Void {
+    //static func updateRecipeData(recdata: Recipe) -> Void {
+    static func updateRecipeData(ing: [Ingredients]) -> Void {
         
         //var a = r
         
@@ -120,7 +121,7 @@ class DataService {
         //try? JSONEncoder().encode(recdata).write(to: jsonURL, options: .atomic)
         
         do {
-            var recipedata = try JSONEncoder().encode(recdata.ingredients).write(to: jsonURL, options: .atomic)
+            var recipedata = try JSONEncoder().encode(ing).write(to: jsonURL, options: .atomic)
             
              
             

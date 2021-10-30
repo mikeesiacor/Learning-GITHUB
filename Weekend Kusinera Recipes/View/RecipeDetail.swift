@@ -100,9 +100,9 @@ struct RecipeDetail: View {
             //self.model.myCart.append(contentsOf: self.model.tempCart)
             
             self.model.ing.append(contentsOf: self.recipe.ingredients)
-        
-            
+            DataService.updateRecipeData(ing: self.model.ing)
             //DataService.updateRecipeData(recdata: self.recipe)
+            
             //DataService.updateRecipeData(r: [self.recipe], recdata: [self.recipe])
             //self.model.myCart.append ("test")
            
