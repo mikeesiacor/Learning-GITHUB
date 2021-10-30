@@ -63,7 +63,19 @@ struct RecipeDetail: View {
                             Text(RecipeModel.calculateQty(ing: item, multServ: self.selectedServingSize, addToList: self.added) )
                         
                             Text(item.name)
-                              
+                            
+                            //Text(Whatever().whatnow(s: item.name))
+                            
+                            //Text(whatever().test(s: item.name))
+                            
+                            //if model.cart.append(Cart("id": UUID(), "cartitem": item.name )) {
+                            //    Text("a")
+                            //}
+                            
+                            if self.added == true {
+                                Temp()
+                            }
+                                
                         }  //HSTack
                         
                          
@@ -83,16 +95,58 @@ struct RecipeDetail: View {
                         Spacer()
                         
         }.onDisappear {
+            //self.model.tempCart.append(contentsOf: self.model.myCart)
+            //self.model.myCart.append("bacon")
+            //self.model.myCart.append(contentsOf: self.model.tempCart)
+            
+            self.model.ing.append(contentsOf: self.recipe.ingredients)
+        
+            
             //DataService.updateRecipeData(recdata: self.recipe)
-
+            //DataService.updateRecipeData(r: [self.recipe], recdata: [self.recipe])
+            //self.model.myCart.append ("test")
+           
+            /*
+            //if self.added == true {
+                ForEach (self.recipe.ingredients) {item in
+                    //self.model.myCart.append(<#T##newElement: String##String#>)
+                    //let temp = item.name
+                    //self.model.cart.append(contentsOf: <#T##Sequence#>)
+                    Text(item.name)
+                    
+                }
+            // }
+            
+            
+       
+            
+            for n in 0..<self.recipe.ingredients.count {
+                
+                //let temp = RecipeModel.calculateQty(ing: item, multServ: self.selectedServingSize, addToList: self.added)
+                
+                self.model.myCart.append ("test \(n)")
+                //self.model.myCart.append()
+                
+               print("in onDisappear")
+        
         }
+       */
             
         }
+            
+        //func test(s: String) -> Void {
+            
+        //    model.myCart.append(s)
+        //   return
+        // }
+         
+        
+        
+    } //??
 
-     
-    }
-
-
+   
+   
+    
 
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
@@ -105,3 +159,24 @@ struct RecipeDetailView_Previews: PreviewProvider {
         
     }
 }
+}
+
+
+/*
+struct Whatever: View {
+
+     @EnvironmentObject var model: RecipeModel
+    
+    var body: some View {
+           EmptyView()
+          
+       }
+    
+    func whatnow(myCart:[String], s: String)-> String {
+        var x = myCart
+        x.append(s)
+        
+        return s
+    }
+}
+*/

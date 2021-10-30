@@ -15,14 +15,18 @@ class RecipeModel: ObservableObject  {
     @Published var recipe =  [Recipe]()
     //@Published var myCart:[(Int, String)] = []
     @Published var myCart:[String] = []
+    @Published var tempCart:[String] = []
     @Published var cart = [Cart]()
+    @Published var ing:[Ingredients] = []
     var listcount = 0
     
     init() {
         let service = DataService()    //DataServices()
         self.recipe = service.getRecipeData()
-        //self.cart = service.getCartData()
-        //self.myCart = service.getCartData()
+        self.cart = service.getCartData()
+        self.myCart = service.getMyCartData()
+        self.tempCart = service.getTempCartData()
+        self.ing = service.getIngredientData()
         
     }  // init
     
@@ -122,14 +126,7 @@ class RecipeModel: ObservableObject  {
         return (allHighlights)
     }
     
-    //add to Shopping cart
-    static func addToCart (ing: String) -> Bool {
-        var obj = Cart()
-        obj.cartitem.append(ing)
-         
-           
-        return true
-    }
+   
     
         
     static func saveCart(m: RecipeModel)  -> Bool {

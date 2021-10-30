@@ -11,6 +11,8 @@ import SwiftUI
 struct ShoppingList: View {
     
     @EnvironmentObject var model: RecipeModel
+    
+     
      
     var body: some View {
  
@@ -22,9 +24,23 @@ struct ShoppingList: View {
             
             ScrollView  {
   
-                ForEach(model.myCart, id: \.self ) {c in
-                    Text(c)
+               // ForEach(model.cart) {c in
+               //     Text(c.cartitem)
+               // }
+                
+                //ForEach(0 ..< model.myCart.count, id: \.self) {value in
+                //Text(self.model.myCart[value])
+                //   }
+                
+                
+                ForEach(0 ..< model.ing.count, id: \.self){value in
+                    //Text("hello")
+                    //Text(String(ing[value]["name"]))
+                    Text(String(self.model.ing[value].shopitem))
                 }
+                
+                
+                
                 
                 
                 //for (index, value) in model.myCart.enumerated() {
