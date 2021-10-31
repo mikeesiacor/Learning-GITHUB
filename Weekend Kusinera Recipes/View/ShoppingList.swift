@@ -2,7 +2,7 @@
 //  ShoppingList.swift
 //  Weekend Kusinera Recipes
 //
-//  Created by Michelle Siacor on 21/10/21.
+//  Created by Mikee Siacor on 21/10/21.
 //  Copyright © 2021 Mikee Siacor. All rights reserved.
 //
 
@@ -12,64 +12,40 @@ struct ShoppingList: View {
     
     @EnvironmentObject var model: RecipeModel
     
-     
-     
     var body: some View {
- 
-        VStack  {
+       
+        VStack {
             Text("Weekend Kusinera's Cart")
-                .font(.headline)
+                .font(.headline).font(Font.custom("Avenir Heavy", size: 18))
                 .bold()
-          
             
-            ScrollView  {
-  
-               // ForEach(model.cart) {c in
-               //     Text(c.cartitem)
-               // }
-                
-                //ForEach(0 ..< model.myCart.count, id: \.self) {value in
-                //Text(self.model.myCart[value])
-                //   }
-                
-                
-                ForEach(0 ..< model.ing.count, id: \.self){value in
-                    //Text("hello")
-                    //Text(String(ing[value]["name"]))
-                    Text(String(self.model.ing[value].shopitem))
+            List(model.ing) {m in
+                VStack {
+                    Text(m.shopitem)
+                        .font(Font.custom("Avenir", size: 16))
                 }
-                
-                
-                
-                
-                
-                //for (index, value) in model.myCart.enumerated() {
-                //    Text(value)
-                //}
-                 
-                /*
-                 ForEach(self.model.recipe) {m in
-                    ForEach(m.ingredients) {ing in
-                        if (ing.inlist == true && ing.shopitem != nil) {
-                            
-                            Text(ing.shopitem)
-                                .multilineTextAlignment(.leading)
-                            
-                          }
-                     }
-                    
-                 }
-                */
             }
             
-           
-        }.onDisappear {
-            //RecipeModel.saveCart(m:self.model)
-           // DataService.updateRecipeData(recdata: [Recipe])
         }
         
-        
-         //Text("Your Shopping Cart is Empty")
+        /*
+        ScrollView  {
+            
+            VStack(alignment: .leading, spacing: 0) {
+                
+                Text("Weekend Kusinera's Cart")
+                    .font(.headline).font(Font.custom("Avenir Heavy", size: 18))
+                    .bold()
+                
+                ForEach(0 ..< model.ing.count, id: \.self){value in
+                    Text(String(self.model.ing[value].shopitem))
+                        .font(Font.custom("Avenir", size: 16))
+                        
+                }
+                
+            }
+        }
+        */
     }
 }
 

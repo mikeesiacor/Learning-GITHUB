@@ -2,23 +2,21 @@
     {
         "name" : "Boneless Lechon ",
         "featured" : true,
-        "cuisine" : "Westerb",
-        "highlights" : ["Baked","Healthy"],
+        "cuisine" : "Filipino",
+        "highlights" : ["Baked","Festive"],
         "ingredients" : [
-            {"name": "Pork Belly", "num" : 1, "unit" : "kg", "inlist": false, "shopitem": ""},
-            {"name": "minced garlic", "num" : 4, "unit": "cloves","inlist": false, "shopitem": ""},
-            {"name": "Bay Leaves", "num": 4, "unit": "pc","inlist": false, "shopitem": "" },
-            {"name": "Regular Soy Sauce", "num": 2, "unit": "tbsp","inlist": false, "shopitem": "" },
-            {"name": "Dark Soya Sauce", "num": 1, "unit": "tbsp","inlist": false, "shopitem": "" },
-            {"name": "Vinegar", "num": 2, "unit": "tbsp","inlist": false, "shopitem": "" },
-            {"name": "Water", "num": 1, "denom": 2, "unit": "cup","inlist": false, "shopitem": "" },
-            {"name": "Brown Sugar", "num": 1, "unit": "tbsp","inlist": false, "shopitem": "" },
-            {"name": "Salted Black Beans", "num": 1, "unit": "tbsp","inlist": false, "shopitem": "" },
-            {"name": "Dried Banana Blossoms", "num": 4, "unit": "pc","inlist": false, "shopitem": "" }
+            {"name": "whole pork belly", "num" : 2, "unit" : "kg", "inlist": false, "shopitem": ""},
+            {"name": "lemon grass (tanglad)", "num" : 2, "unit": "stalk","inlist": false, "shopitem": ""},
+            {"name": "green onion leaves", "num": 2, "unit": "stalk","inlist": false, "shopitem": "" },
+            {"name": "laurel", "num": 2, "unit": "leaf","inlist": false, "shopitem": "" },
+            {"name": "black peppercorn", "num": 1, "unit": "tbsp","inlist": false, "shopitem": "" },
+            {"name": "garlic, crushed", "num": 4, "unit": "clove","inlist": false, "shopitem": "" },
+            {"name": "white sugar", "num": 1, "denom": 4, "unit": "cup","inlist": false, "shopitem": "" },
+            {"name": "rock salt", "num": 1,"denom":4, "unit": "tbsp","inlist": false, "shopitem": "" },
+            {"name": "water", "num": 5, "unit": "cup","inlist": false, "shopitem": "" }
         ],
-        "procedure" : ["1. Combine pork belly, garlic, soy sauce and vinegar in wok", "2. Bring to a boil over medium/high heat, stirring occasionally until fat has rendered and meat is tender.","3. Transfer meat to a large pot. Add dark soya sauce, sugar, bay leaves and water", "4. Bring to a boil until and simmer until meat is tender and liquid is reduced to 1/3","5. Add black beans and simmer until liquid is reduced and thickened"],
-        "image" : "Boneless Lechon Belly"
-    },
+        "procedure" : ["1. Make the brine by combining lemongrass, onions, laurel leaves,peppercorns, garlic, sugar, salt and water.", "2. Bring to a boil over medium/high heat,until the aromatics are infused into the water. Let it cool completely","3. Transfer the brine mixture into a large casserole that can fit in the pork. Be sure that the pork is completely submerged in the brine. Leave in the fridge overnight or at least 6 hours", "4. Remove pork from the casserole and wash under running water. Pat dry","5. Lay the pork flat and layer with stalks of lemongrass, green onions, laurel leaves and black peppercorns", "6.Roll the pork and secure with a kitchen twine. Cover with aluminum foil", "7.Pop into preheated oven at 180°C for 2 hrs", "8. Remove aluminum foil. Be careful because the juice from the pork get accumulated at the bottom of the aluminum foil is very hot", "9.Put the pork back into the oven and roast for another 3hrs at 200°C"],
+        "image" : "Boneless Lechon Belly"  },
 {
     "name" : "Humba Bisaya",
     "featured" : true,

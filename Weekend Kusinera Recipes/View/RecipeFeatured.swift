@@ -15,73 +15,69 @@ struct RecipeFeatured: View {
     
     
     var body: some View {
- 
-        VStack {
         
-        /*
-        Text("Featured Recipes")
-            .bold()
-            .padding(.leading)
-            .padding(.top, 100)
-            .font(.largeTitle)
-        */
+        VStack {
             
             NavigationView {
-               GeometryReader { geo in
-                ScrollView (.horizontal, showsIndicators: true) {
-                 
-                 HStack(spacing: 0) {
-                    ForEach(self.model.recipe) {m in
-                         if (m.featured == true) {
-                            NavigationLink(destination: RecipeDetail(recipe: m) ,
-                                label: {
-                                 VStack {
-                                  
-                                 Text(m.name)
-                                    .font(.headline)
-                                    .bold()
-                                    .multilineTextAlignment(.leading)
+                GeometryReader { geo in
+                    ScrollView (.horizontal, showsIndicators: true) {
+                        
+                        HStack(spacing: 0) {
+                            ForEach(self.model.recipe) {m in
+                                if (m.featured == true) {
+                                    NavigationLink(destination: RecipeDetail(recipe: m) ,
+                                                   label: {
+                                                    VStack {
+                                                        
+                                                        Text(m.name)
+                                                            .font(Font.custom("Avenir Heavy", size: 18))
+                                                            .bold()
+                                                            .multilineTextAlignment(.leading)
+                                                        
+                                                        Image(m.image)
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .clipped()
+                                                            .frame(width: 500, height: 500, alignment: .topLeading)
+                                                            .offset(x: 2, y: 2)
+                                                        
+                                                        Text("Cuisine : \(m.cuisine)")
+                                                            .font(Font.custom("Avenir", size: 16))
+                                                        
+                                                        HStack {
+                                                            Text("***")
+                                                                .font(Font.custom("Avenir", size: 16))
+                                                            Text(RecipeModel.fetchHighlights(r: m.highlights))
+                                                                .font(Font.custom("Avenir", size: 16))
+                                                            Text("***")
+                                                                .font(Font.custom("Avenir", size: 16))
+                                                        }
+                                                        
+                                                        
+                                                    }
+                                    }
+                                    ).buttonStyle(PlainButtonStyle())
                                     
-                                 Image(m.image)
-                                 .resizable()
-                                 .aspectRatio(contentMode: .fit)
-                                 .clipped()
-                                 .frame(width: 500, height: 500, alignment: .topLeading)
-                                 .offset(x: 2, y: 2)
-                                 
-                                 Text("Cuisine : \(m.cuisine)")
-                                 
-                                 HStack {
-                                     Text("***")
-                                     Text(RecipeModel.fetchHighlights(r: m.highlights))
-                                     Text("***")
-                                 }
-
-                             
                                 }
+                                
+                            }
+                            
                         }
-                            ).buttonStyle(PlainButtonStyle())
-                             
-                     }
-                         
-                     }
-
-                 }
-
-                }
+                        
+                    }
                     
+                    
+                    
+                }.navigationBarTitle("Recommended Recipes").font(Font.custom("Avenir Heavy", size: 24))
                 
-                
-               }.navigationBarTitle("Recommended Recipes")
-             
             }
-
             
-
+            
+            
+        }
+        
+        
     }
-    
-
-}
 }
 
 
